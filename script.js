@@ -127,7 +127,7 @@ class Practic {
             ["budzik", "будильник"],
             ["mróz", "мороз"],
             ["dzieci", "діти"]
-]
+        ]
         this.gemeny = [
             ["Kinder", "діти"],
             ["Großmutter", "бабуся"],
@@ -172,7 +172,7 @@ class Practic {
 
 
         for (let i = 0; i < list.length; i++) {
-            tds[i].innerHTML = ${list[i][0]} - ${list[i][1]}
+            tds[i].innerHTML = `${list[i][0]} - ${list[i][1]}`
         }
     }
 }
@@ -258,14 +258,14 @@ let test = new Test()
 
 if (cookie) {
     let data = cookie.split('/')
-    container_start_h3.innerHTML = <h3>Ви дали ${data[1]} правильних відповідей із ${data[0]}.Точність ${Math.round(data[1] * 100 / data[0])}%.</h3>
+    container_start_h3.innerHTML = `<h3>Ви дали ${data[1]} правильних відповідей із ${data[0]}.Точність ${Math.round(data[1] * 100 / data[0])}%.</h3>`
 }
 
 function check() {
     setTimeout(function () {
-        let new_cookie = number_high_score = ${test.count_questions}/${test.correct_answers}; max-age = 10000000000000000000
+        let new_cookie = `number_high_score = ${test.count_questions}/${test.correct_answers}; max-age = 10000000000000000000`
         document.cookie = new_cookie
-        alert(Кінець! Ви зробили ${test.correct_answers} правильних відповідей з ${test.count_questions})
+        alert(`Кінець! Ви зробили ${test.correct_answers} правильних відповідей з ${test.count_questions}`)
         test.start = true
     }, 1000 * 60)
 }
