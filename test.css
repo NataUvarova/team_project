@@ -83,16 +83,26 @@ nav {
     border-radius: 10px;
 }
 
-main {
+.main {
 
-    width: 100%;
-    top: 100px;
+    width: 70%;
+    height: 400px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     height: 70vh;
 }
-
+.main select{
+    position: relative;
+    left: 120px;
+}
+.h3{
+    width: 90%;
+    position: relative;
+    top: 50px;
+    text-align: center;
+    font-size: 30px;
+}
 
 .app {
     position: relative;
@@ -123,8 +133,7 @@ p:hover{
     transition: 0.5 s linear;
 }
 footer {
-    position: relative;
-    top:155px;
+    width: 90%;
     text-align: center;
     padding: 20px;
     color: rgb(23, 22, 22);
