@@ -125,7 +125,7 @@ h1{
     color:rgb(105, 102, 102);
 }
 p{
-    color:gold;
+    color:rgb(250, 78, 10);
 }
 p:hover{
     box-shadow: 3px 3px 3px white;
