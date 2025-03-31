@@ -255,21 +255,21 @@ let test = new Test()
 let timeoutId
 let cPoints;
 
-for (let i = 0; i < cookies.length; i += 1) {
-    let name_value = cookies[i].split('=');
-    if (name_value[0].includes('cPoints')) {
-        isCookies = true;
-        cPoints = name_value[1];
-        container_start_h3.innerHTML = `<h3>result of last game:${cPoints} is right</h3>`;
-    }
-}
+// for (let i = 0; i < cookies.length; i += 1) {
+//     let name_value = cookies[i].split('=');
+//     if (name_value[0].includes('cPoints')) {
+//         isCookies = true;
+//         cPoints = name_value[1];
+//         container_start_h3.innerHTML = `<h3>result of last game:${cPoints} is right</h3>`;
+//     }
+// }
 
 
-console.log(document.cookie)
+// console.log(document.cookie)
 function check() {
     timeoutId = setTimeout(function () {
         container_start_h3.innerHTML = `<h3>result of last game:${test.correct_answers} is right, your accuracy is ${Math.round(test.correct_answers * 100 / test.count_questions)}%</h3>`;
-        document.cookie = `cPoints=${test.correct_answers};max-age=${31536000000} `;
+        // document.cookie = `cPoints=${test.correct_answers};max-age=${31536000000} `;
         // alert(`Кінець! Ви зробили ${test.correct_answers} правильних відповідей з ${test.count_questions}`)
         test.start = true
     }, 1000 * 60)
@@ -294,7 +294,7 @@ button_verify.addEventListener("click", function () {
     }
     else{
         container_start_h3.innerHTML = `<h3>result of last game:${test.correct_answers} is right, your accuracy is ${Math.round(test.correct_answers * 100 / test.count_questions)}%</h3>`;
-        document.cookie = `cPoints=${test.correct_answers};max-age=${31536000000} `;
+        // document.cookie = `cPoints=${test.correct_answers};max-age=${31536000000} `;
         clearTimeout(timeoutId)
         alert(`Слова закінчились! Ви зробили ${test.correct_answers} правильних відповідей з ${test.count_questions}`)
         
